@@ -42,13 +42,9 @@ Working train scripts (from repo root):
 
 ## Suggested first work on Spark
 
-1. Confirm GPU: `python3 -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"`
-2. From this repo root, import connect4 so Cython builds.
-3. Tiny run: `hnefatafl/train_test.py` or tictactoe with skip-self-play off, only 1–2 rounds.
-4. Then othello / scaled-down connect4.
-5. Overnight: connect4 or tafl/stratego if the short runs are stable.
+The first checks are done: the GPU is visible, Connect4 imports, and one tiny tic-tac-toe round wrote a checkpoint. Continue with [SPARK-EVAL-PLAN.md](SPARK-EVAL-PLAN.md).
 
-Record: did it compile, did CUDA work in worker processes, did it finish a round and write a checkpoint, did it stay up for hours.
+Record, for each later stage: did it compile, did CUDA work while workers were running, did a round finish and write a checkpoint, did a run stay up for hours.
 
 ## SPaDE context (do not implement now)
 
